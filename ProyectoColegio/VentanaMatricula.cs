@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace ProyectoColegio
 {
-    public partial class Form1 : Form
+    public partial class VentanaMatricula : Form
     {
-        public Form1()
+        public VentanaMatricula()
         {
             InitializeComponent();
         }
@@ -122,7 +122,7 @@ namespace ProyectoColegio
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

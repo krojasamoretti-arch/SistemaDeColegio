@@ -1,6 +1,6 @@
 ﻿namespace ProyectoColegio
 {
-    partial class Form1
+    partial class VentanaMatricula
     {
         /// <summary>
         ///  Required designer variable.
@@ -50,16 +50,14 @@
             dgvMonto = new DataGridViewTextBoxColumn();
             cbGrado = new ComboBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            registrarToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvResultados).BeginInit();
-            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(237, 39);
+            label1.Location = new Point(224, 34);
             label1.Name = "label1";
             label1.Size = new Size(391, 41);
             label1.TabIndex = 0;
@@ -160,7 +158,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(503, 212);
+            btnSalir.Location = new Point(500, 212);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(142, 94);
             btnSalir.TabIndex = 13;
@@ -173,7 +171,7 @@
             dgvResultados.AllowUserToDeleteRows = false;
             dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResultados.Columns.AddRange(new DataGridViewColumn[] { dgvNombre, dgvDNI, dgvGRADO, dgvAPODERADO, dgvMonto });
-            dgvResultados.Location = new Point(50, 331);
+            dgvResultados.Location = new Point(49, 331);
             dgvResultados.Name = "dgvResultados";
             dgvResultados.ReadOnly = true;
             dgvResultados.RowHeadersWidth = 51;
@@ -232,17 +230,10 @@
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { registrarToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(182, 28);
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // registrarToolStripMenuItem
-            // 
-            registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            registrarToolStripMenuItem.Size = new Size(181, 24);
-            registrarToolStripMenuItem.Text = "Registrar Libros";
-            // 
-            // Form1
+            // VentanaMatricula
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -262,11 +253,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "VentanaMatricula";
             Text = "VentanaMatricula";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvResultados).EndInit();
-            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -294,6 +284,5 @@
         private DataGridViewTextBoxColumn dgvAPODERADO;
         private DataGridViewTextBoxColumn dgvMonto;
         private ContextMenuStrip contextMenuStrip1;
-        private ToolStripMenuItem registrarToolStripMenuItem;
     }
 }
