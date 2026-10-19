@@ -1,0 +1,114 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace ProyectoColegio
+{
+    public partial class VentanaUniforme : Form
+    {
+        public VentanaUniforme()
+        {
+            InitializeComponent();
+        }
+
+        string prenda()
+        {
+            return cbPrenda.Text;
+        }
+
+        string talla()
+        {
+            return cbTalla.Text;
+        }
+
+        double precio()
+        {
+            double precio = double.Parse(txtPrecio.Text);
+            return precio;
+        }
+
+        double cantidad()
+        {
+            double cantidad = double.Parse(cbCantidad.Text);
+            return cantidad;
+        }
+
+        double total()
+        {
+            double total = precio() * cantidad();
+            return total;
+        }
+
+        void calcularTotales()
+        {
+            double sumaCantidad = 0;
+            double sumaPrecioTotal = 0;
+
+            foreach (DataGridViewRow row in dgvResultados.Rows)
+            {
+                if (row.Cells[3].Value != null)
+                {
+                    sumaCantidad += double.Parse(row.Cells[3].Value.ToString());
+                }
+
+                if (row.Cells[4].Value != null)
+                {
+                    sumaPrecioTotal += double.Parse(row.Cells[4].Value.ToString());
+                }
+            }
+
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            dgvResultados.Rows.Add(
+                prenda(),
+                talla(),
+                precio(),
+                cantidad(),
+                total()
+                );
+
+
+
+
+        }
+
+        private void cbPrenda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbPrenda.Text)
+            {
+                case "Camisa":
+                    txtPrecio.Text = "35.00";
+                    break;
+                case "Pantalón":
+                    txtPrecio.Text = "50.00";
+                    break;
+                case "Buzo":
+                    txtPrecio.Text = "80.00";
+                    break;
+                case "Falda":
+                    txtPrecio.Text = "45.00";
+                    break;
+                case "Casaca":
+                    txtPrecio.Text = "80.00";
+                    break;
+                default:
+                    txtPrecio.Clear();
+                    break;
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

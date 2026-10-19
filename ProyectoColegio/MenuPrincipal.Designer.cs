@@ -32,13 +32,14 @@
             btnAbrirMatricula = new Button();
             btnAbrirVentas = new Button();
             btnSalir = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(30, 40);
+            label1.Location = new Point(43, 66);
             label1.Name = "label1";
             label1.Size = new Size(826, 41);
             label1.TabIndex = 0;
@@ -46,7 +47,8 @@
             // 
             // btnAbrirMatricula
             // 
-            btnAbrirMatricula.Location = new Point(61, 224);
+            btnAbrirMatricula.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAbrirMatricula.Location = new Point(72, 170);
             btnAbrirMatricula.Name = "btnAbrirMatricula";
             btnAbrirMatricula.Size = new Size(200, 150);
             btnAbrirMatricula.TabIndex = 1;
@@ -56,17 +58,19 @@
             // 
             // btnAbrirVentas
             // 
-            btnAbrirVentas.Location = new Point(349, 224);
+            btnAbrirVentas.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAbrirVentas.Location = new Point(627, 170);
             btnAbrirVentas.Name = "btnAbrirVentas";
             btnAbrirVentas.Size = new Size(200, 150);
             btnAbrirVentas.TabIndex = 2;
-            btnAbrirVentas.Text = "REGISTRAR VENTAS";
+            btnAbrirVentas.Text = "REGISTRAR VENTA DE LIBROS";
             btnAbrirVentas.UseVisualStyleBackColor = true;
             btnAbrirVentas.Click += button2_Click;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(635, 224);
+            btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalir.Location = new Point(351, 360);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(200, 150);
             btnSalir.TabIndex = 3;
@@ -74,17 +78,29 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += button3_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(351, 170);
+            button1.Name = "button1";
+            button1.Size = new Size(200, 150);
+            button1.TabIndex = 4;
+            button1.Text = "REGISTRAR VENTA UNIFORME";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(917, 522);
+            Controls.Add(button1);
             Controls.Add(btnSalir);
             Controls.Add(btnAbrirVentas);
             Controls.Add(btnAbrirMatricula);
             Controls.Add(label1);
             Name = "MenuPrincipal";
-            Text = "Form2";
+            Text = "Menu Principal";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,5 +111,6 @@
         private Button btnAbrirMatricula;
         private Button btnAbrirVentas;
         private Button btnSalir;
+        private Button button1;
     }
 }

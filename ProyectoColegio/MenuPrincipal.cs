@@ -32,8 +32,14 @@ namespace ProyectoColegio
 
         private void btnAbrirMatricula_Click(object sender, EventArgs e)
         {
-            VentanaMatricula registro= new VentanaMatricula();
+            VentanaMatricula registro = new VentanaMatricula();
             registro.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VentanaUniforme registro2 = new VentanaUniforme();
+            registro2.ShowDialog();
         }
     }
 }

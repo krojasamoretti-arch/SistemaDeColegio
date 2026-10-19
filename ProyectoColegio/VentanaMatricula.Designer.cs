@@ -168,6 +168,7 @@
             // 
             // dgvResultados
             // 
+            dgvResultados.AllowUserToAddRows = false;
             dgvResultados.AllowUserToDeleteRows = false;
             dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResultados.Columns.AddRange(new DataGridViewColumn[] { dgvNombre, dgvDNI, dgvGRADO, dgvAPODERADO, dgvMonto });
@@ -221,7 +222,7 @@
             // cbGrado
             // 
             cbGrado.FormattingEnabled = true;
-            cbGrado.Items.AddRange(new object[] { "Primero Secundaria", "Segundo Secundaria", "Tercero Secundaria", "Cuarto Secundaria", "Quinto Secundaria" });
+            cbGrado.Items.AddRange(new object[] { "Primero (Primaria)", "Segundo (Primaria)", "Tercero (Primaria)", "Cuarto (Primaria)", "Quinto (Primaria)", "Sexo (Primaria)", "Primero (Secundiaria)", "Segundo (Secundaria)", "Tercero (Secundaria)", "Cuarto (Secundaria)", "Quinto (Secundaria)" });
             cbGrado.Location = new Point(119, 201);
             cbGrado.Name = "cbGrado";
             cbGrado.Size = new Size(247, 28);
