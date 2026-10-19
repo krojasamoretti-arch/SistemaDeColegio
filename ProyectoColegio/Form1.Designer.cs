@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -48,7 +49,10 @@
             dgvAPODERADO = new DataGridViewTextBoxColumn();
             dgvMonto = new DataGridViewTextBoxColumn();
             cbGrado = new ComboBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            registrarToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvResultados).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -225,6 +229,19 @@
             cbGrado.Size = new Size(247, 28);
             cbGrado.TabIndex = 15;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { registrarToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(182, 28);
+            // 
+            // registrarToolStripMenuItem
+            // 
+            registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
+            registrarToolStripMenuItem.Size = new Size(181, 24);
+            registrarToolStripMenuItem.Text = "Registrar Libros";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -249,6 +266,7 @@
             Text = "VentanaMatricula";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvResultados).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -275,5 +293,7 @@
         private DataGridViewTextBoxColumn dgvGRADO;
         private DataGridViewTextBoxColumn dgvAPODERADO;
         private DataGridViewTextBoxColumn dgvMonto;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem registrarToolStripMenuItem;
     }
 }

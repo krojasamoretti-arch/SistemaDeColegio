@@ -1,4 +1,6 @@
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Linq;
+
 
 namespace ProyectoColegio
 {
@@ -35,6 +37,38 @@ namespace ProyectoColegio
             return monto;
         }
 
+        private bool ValidarCamposMatricula()
+        {
+            string dni = txtDni.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(dni))
+            {
+                MessageBox.Show("El DNI es obligatorio.", "Campo requerido",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDni.Focus();
+                return false;
+            }
+
+            if (dni.Length != 8 || !dni.All(char.IsDigit))
+            {
+                MessageBox.Show("El DNI debe tener 8 dígitos numéricos.", "DNI inválido",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDni.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("El nombre completo es obligatorio.", "Campo requerido",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombre.Focus();
+                return false;
+            }
+            return true;
+        }
+
+
+
         void CalcularMatricula()
         {
             double sumaMonto = 0;
@@ -46,7 +80,7 @@ namespace ProyectoColegio
                     sumaMonto += double.Parse(row.Cells[4].Value.ToString());
                 }
             }
-            txtMonto.Text = sumaMonto.ToString("0.00");
+            
         }
 
         void Limpiar()
@@ -66,14 +100,19 @@ namespace ProyectoColegio
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
+
+            CalcularMatricula();
+
+            if (!ValidarCamposMatricula())
+                return;
+
             dgvResultados.Rows.Add(
                 nombre(),
                 dni(),
                 grado(),
                 apoderado(),
                 monto());
-
-            CalcularMatricula();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
