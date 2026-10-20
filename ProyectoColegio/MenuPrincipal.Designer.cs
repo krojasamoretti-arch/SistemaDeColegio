@@ -65,7 +65,7 @@
             btnAbrirVentas.TabIndex = 2;
             btnAbrirVentas.Text = "REGISTRAR VENTA DE LIBROS";
             btnAbrirVentas.UseVisualStyleBackColor = true;
-            btnAbrirVentas.Click += button2_Click;
+            btnAbrirVentas.Click += btnAbrirVentas_Click;
             // 
             // btnSalir
             // 

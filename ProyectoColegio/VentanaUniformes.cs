@@ -10,6 +10,9 @@ namespace ProyectoColegio
 {
     public partial class VentanaUniforme : Form
     {
+            string[] prendas = { "Camisa", "Pantalón", "Buzo", "Falda", "Casaca" };
+            double[] precios = { 35.00, 50.00, 80.00, 45.00, 50.00 };
+
         public VentanaUniforme()
         {
             InitializeComponent();
@@ -80,29 +83,18 @@ namespace ProyectoColegio
 
 
         }
-
+        
         private void cbPrenda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (cbPrenda.Text)
+            txtPrecio.Clear();
+
+            for (int i=0; 1<prendas.Length; i++)
             {
-                case "Camisa":
-                    txtPrecio.Text = "35.00";
+                if (prendas[i] == cbPrenda.Text)
+                {
+                    txtPrecio.Text = precios[i].ToString("0.00");
                     break;
-                case "Pantalón":
-                    txtPrecio.Text = "50.00";
-                    break;
-                case "Buzo":
-                    txtPrecio.Text = "80.00";
-                    break;
-                case "Falda":
-                    txtPrecio.Text = "45.00";
-                    break;
-                case "Casaca":
-                    txtPrecio.Text = "80.00";
-                    break;
-                default:
-                    txtPrecio.Clear();
-                    break;
+                }
             }
         }
 

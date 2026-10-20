@@ -66,45 +66,50 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.Location = new Point(12, 106);
             label2.Name = "label2";
-            label2.Size = new Size(73, 20);
+            label2.Size = new Size(78, 20);
             label2.TabIndex = 1;
             label2.Text = "NOMBRE:";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label3.Location = new Point(12, 155);
             label3.Name = "label3";
-            label3.Size = new Size(38, 20);
+            label3.Size = new Size(41, 20);
             label3.TabIndex = 2;
             label3.Text = "DNI:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 196);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label4.Location = new Point(12, 201);
             label4.Name = "label4";
-            label4.Size = new Size(63, 20);
+            label4.Size = new Size(67, 20);
             label4.TabIndex = 3;
             label4.Text = "GRADO:";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label5.Location = new Point(12, 242);
             label5.Name = "label5";
-            label5.Size = new Size(101, 20);
+            label5.Size = new Size(106, 20);
             label5.TabIndex = 4;
             label5.Text = "APODERADO:";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label6.Location = new Point(12, 286);
             label6.Name = "label6";
-            label6.Size = new Size(65, 20);
+            label6.Size = new Size(69, 20);
             label6.TabIndex = 5;
             label6.Text = "MONTO:";
             // 

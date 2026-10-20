@@ -25,11 +25,6 @@ namespace ProyectoColegio
             Salir();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAbrirMatricula_Click(object sender, EventArgs e)
         {
             VentanaMatricula registro = new VentanaMatricula();
@@ -40,6 +35,12 @@ namespace ProyectoColegio
         {
             VentanaUniforme registro2 = new VentanaUniforme();
             registro2.ShowDialog();
+        }
+
+        private void btnAbrirVentas_Click(object sender, EventArgs e)
+        {
+            VentanaLibros registro3 = new VentanaLibros();
+            registro3.ShowDialog();
         }
     }
 }
