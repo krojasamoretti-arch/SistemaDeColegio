@@ -2,14 +2,7 @@ namespace ProyectoColegio
 {
     public partial class VentanaMatricula : Form
     {
-
-
-        string[] grados = { "Primero (Primaria)", "Segundo (Primaria)",
-            "Tercero (Primaria)","Cuarto (Primaria)","Quinto (Primaria)","Sexto (Primaria)",
-             "Primero (Secundiaria)","Segundo (Secundaria)","Tercero (Secundaria)",
-            "Cuarto (Secundaria)","Quinto (Secundaria)"};
-
-        double[] precios = { 250.00, 350.00 };
+        double[] precios = { 250, 350 };
 
         public VentanaMatricula()
         {
@@ -133,23 +126,21 @@ namespace ProyectoColegio
 
         private void cbGrado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < grados.Length; i++)
+            double precio;
+
+            if (cbGrado.SelectedIndex >= 0 && cbGrado.SelectedIndex <= 5)
             {
-                double precio;
-
-                if (grados[i].Contains("Primaria"))
-                {
-                    precio = precios[0];
-                }
-                else
-                {
-                    precio = precios[1];
-                }
-
-                txtMonto.Text = Convert.ToString(precio);
+                precio = precios[0];
+            }
+            else
+            {
+                precio = precios[1];
             }
 
 
+            txtMonto.Text = Convert.ToString(precio);
         }
     }
 }
+
+      

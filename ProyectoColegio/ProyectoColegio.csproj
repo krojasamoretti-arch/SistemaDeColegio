@@ -6,14 +6,6 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <CodeSigningCertThumbprint Condition="'$(CodeSigningCertThumbprint)' == ''">$(PROJECTO_COLEGIO_SIGNING_THUMBPRINT)</CodeSigningCertThumbprint>
-    <SignToolPath Condition="'$(SignToolPath)' == ''">signtool.exe</SignToolPath>
-    <TimestampUrl Condition="'$(TimestampUrl)' == ''">https://timestamp.digicert.com</TimestampUrl>
   </PropertyGroup>
-
-  <Target Name="SignAuthenticode" AfterTargets="Build" Condition="'$(CodeSigningCertThumbprint)' != ''">
-    <Exec Command="&quot;$(SignToolPath)&quot; sign /sha1 &quot;$(CodeSigningCertThumbprint)&quot; /s My /fd SHA256 /tr &quot;$(TimestampUrl)&quot; /td SHA256 &quot;$(TargetPath)&quot;" />
-    <Exec Command="&quot;$(SignToolPath)&quot; sign /sha1 &quot;$(CodeSigningCertThumbprint)&quot; /s My /fd SHA256 /tr &quot;$(TimestampUrl)&quot; /td SHA256 &quot;$(TargetDir)$(AssemblyName).dll&quot;" />
-  </Target>
 
 </Project>
