@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             label1 = new Label();
             btnAbrirMatricula = new Button();
             btnAbrirVentas = new Button();
@@ -39,7 +40,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(43, 66);
+            label1.Location = new Point(100, 45);
             label1.Name = "label1";
             label1.Size = new Size(826, 41);
             label1.TabIndex = 0;
@@ -48,7 +49,7 @@
             // btnAbrirMatricula
             // 
             btnAbrirMatricula.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAbrirMatricula.Location = new Point(72, 170);
+            btnAbrirMatricula.Location = new Point(141, 131);
             btnAbrirMatricula.Name = "btnAbrirMatricula";
             btnAbrirMatricula.Size = new Size(200, 150);
             btnAbrirMatricula.TabIndex = 1;
@@ -59,7 +60,7 @@
             // btnAbrirVentas
             // 
             btnAbrirVentas.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAbrirVentas.Location = new Point(627, 170);
+            btnAbrirVentas.Location = new Point(738, 131);
             btnAbrirVentas.Name = "btnAbrirVentas";
             btnAbrirVentas.Size = new Size(200, 150);
             btnAbrirVentas.TabIndex = 2;
@@ -70,7 +71,7 @@
             // btnSalir
             // 
             btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalir.Location = new Point(351, 360);
+            btnSalir.Location = new Point(442, 320);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(200, 150);
             btnSalir.TabIndex = 3;
@@ -81,7 +82,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(351, 170);
+            button1.Location = new Point(442, 131);
             button1.Name = "button1";
             button1.Size = new Size(200, 150);
             button1.TabIndex = 4;
@@ -93,7 +94,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(917, 522);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1028, 485);
             Controls.Add(button1);
             Controls.Add(btnSalir);
             Controls.Add(btnAbrirVentas);

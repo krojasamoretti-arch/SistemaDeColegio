@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaMatricula));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -41,7 +42,6 @@
             txtMonto = new TextBox();
             btnRegistrar = new Button();
             btnLimpiar = new Button();
-            btnSalir = new Button();
             dgvResultados = new DataGridView();
             dgvNombre = new DataGridViewTextBoxColumn();
             dgvDNI = new DataGridViewTextBoxColumn();
@@ -50,6 +50,8 @@
             dgvMonto = new DataGridViewTextBoxColumn();
             cbGrado = new ComboBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            label7 = new Label();
+            txtTotal = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvResultados).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(224, 34);
+            label1.Location = new Point(351, 26);
             label1.Name = "label1";
             label1.Size = new Size(391, 41);
             label1.TabIndex = 0;
@@ -67,7 +69,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label2.Location = new Point(12, 106);
+            label2.Location = new Point(35, 103);
             label2.Name = "label2";
             label2.Size = new Size(78, 20);
             label2.TabIndex = 1;
@@ -77,7 +79,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(12, 155);
+            label3.Location = new Point(408, 118);
             label3.Name = "label3";
             label3.Size = new Size(41, 20);
             label3.TabIndex = 2;
@@ -87,7 +89,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(12, 201);
+            label4.Location = new Point(35, 147);
             label4.Name = "label4";
             label4.Size = new Size(67, 20);
             label4.TabIndex = 3;
@@ -97,7 +99,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label5.Location = new Point(12, 242);
+            label5.Location = new Point(408, 178);
             label5.Name = "label5";
             label5.Size = new Size(106, 20);
             label5.TabIndex = 4;
@@ -107,7 +109,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(12, 286);
+            label6.Location = new Point(33, 201);
             label6.Name = "label6";
             label6.Size = new Size(69, 20);
             label6.TabIndex = 5;
@@ -115,35 +117,35 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(119, 106);
+            txtNombre.Location = new Point(128, 96);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(247, 27);
             txtNombre.TabIndex = 6;
             // 
             // txtDni
             // 
-            txtDni.Location = new Point(119, 155);
+            txtDni.Location = new Point(521, 115);
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(247, 27);
             txtDni.TabIndex = 7;
             // 
             // txtApoderado
             // 
-            txtApoderado.Location = new Point(119, 235);
+            txtApoderado.Location = new Point(521, 171);
             txtApoderado.Name = "txtApoderado";
             txtApoderado.Size = new Size(247, 27);
             txtApoderado.TabIndex = 9;
             // 
             // txtMonto
             // 
-            txtMonto.Location = new Point(119, 279);
+            txtMonto.Location = new Point(128, 194);
             txtMonto.Name = "txtMonto";
             txtMonto.Size = new Size(247, 27);
             txtMonto.TabIndex = 10;
             // 
             // btnRegistrar
             // 
-            btnRegistrar.Location = new Point(396, 106);
+            btnRegistrar.Location = new Point(817, 66);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(142, 94);
             btnRegistrar.TabIndex = 11;
@@ -153,7 +155,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(596, 106);
+            btnLimpiar.Location = new Point(817, 178);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(142, 94);
             btnLimpiar.TabIndex = 12;
@@ -161,23 +163,13 @@
             btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
-            // btnSalir
-            // 
-            btnSalir.Location = new Point(500, 212);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(142, 94);
-            btnSalir.TabIndex = 13;
-            btnSalir.Text = "SALIR";
-            btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += btnSalir_Click;
-            // 
             // dgvResultados
             // 
             dgvResultados.AllowUserToAddRows = false;
             dgvResultados.AllowUserToDeleteRows = false;
             dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResultados.Columns.AddRange(new DataGridViewColumn[] { dgvNombre, dgvDNI, dgvGRADO, dgvAPODERADO, dgvMonto });
-            dgvResultados.Location = new Point(49, 331);
+            dgvResultados.Location = new Point(35, 271);
             dgvResultados.Name = "dgvResultados";
             dgvResultados.ReadOnly = true;
             dgvResultados.RowHeadersWidth = 51;
@@ -227,11 +219,12 @@
             // cbGrado
             // 
             cbGrado.FormattingEnabled = true;
-            cbGrado.Items.AddRange(new object[] { "Primero (Primaria)", "Segundo (Primaria)", "Tercero (Primaria)", "Cuarto (Primaria)", "Quinto (Primaria)", "Sexo (Primaria)", "Primero (Secundiaria)", "Segundo (Secundaria)", "Tercero (Secundaria)", "Cuarto (Secundaria)", "Quinto (Secundaria)" });
-            cbGrado.Location = new Point(119, 201);
+            cbGrado.Items.AddRange(new object[] { "Primero (Primaria)", "Segundo (Primaria)", "Tercero (Primaria)", "Cuarto (Primaria)", "Quinto (Primaria)", "Sexto (Primaria)", "Primero (Secundiaria)", "Segundo (Secundaria)", "Tercero (Secundaria)", "Cuarto (Secundaria)", "Quinto (Secundaria)" });
+            cbGrado.Location = new Point(128, 144);
             cbGrado.Name = "cbGrado";
             cbGrado.Size = new Size(247, 28);
             cbGrado.TabIndex = 15;
+            cbGrado.SelectedIndexChanged += cbGrado_SelectedIndexChanged;
             // 
             // contextMenuStrip1
             // 
@@ -239,14 +232,33 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label7.Location = new Point(826, 323);
+            label7.Name = "label7";
+            label7.Size = new Size(124, 20);
+            label7.TabIndex = 16;
+            label7.Text = "TOTAL A PAGAR";
+            // 
+            // txtTotal
+            // 
+            txtTotal.Location = new Point(770, 356);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(247, 27);
+            txtTotal.TabIndex = 17;
+            // 
             // VentanaMatricula
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(810, 554);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1029, 554);
+            Controls.Add(txtTotal);
+            Controls.Add(label7);
             Controls.Add(cbGrado);
             Controls.Add(dgvResultados);
-            Controls.Add(btnSalir);
             Controls.Add(btnLimpiar);
             Controls.Add(btnRegistrar);
             Controls.Add(txtMonto);
@@ -281,7 +293,6 @@
         private TextBox txtMonto;
         private Button btnRegistrar;
         private Button btnLimpiar;
-        private Button btnSalir;
         private DataGridView dgvResultados;
         private ComboBox cbGrado;
         private DataGridViewTextBoxColumn dgvNombre;
@@ -290,5 +301,7 @@
         private DataGridViewTextBoxColumn dgvAPODERADO;
         private DataGridViewTextBoxColumn dgvMonto;
         private ContextMenuStrip contextMenuStrip1;
+        private Label label7;
+        private TextBox txtTotal;
     }
 }

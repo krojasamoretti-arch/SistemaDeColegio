@@ -1,11 +1,16 @@
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Linq;
-
-
 namespace ProyectoColegio
 {
     public partial class VentanaMatricula : Form
     {
+
+
+        string[] grados = { "Primero (Primaria)", "Segundo (Primaria)",
+            "Tercero (Primaria)","Cuarto (Primaria)","Quinto (Primaria)","Sexto (Primaria)",
+             "Primero (Secundiaria)","Segundo (Secundaria)","Tercero (Secundaria)",
+            "Cuarto (Secundaria)","Quinto (Secundaria)"};
+
+        double[] precios = { 250.00, 350.00 };
+
         public VentanaMatricula()
         {
             InitializeComponent();
@@ -71,7 +76,7 @@ namespace ProyectoColegio
 
         void CalcularMatricula()
         {
-            double sumaMonto = 0;
+            double sumaMonto = Convert.ToDouble(txtMonto.Text);
 
             foreach (DataGridViewRow row in dgvResultados.Rows)
             {
@@ -80,7 +85,8 @@ namespace ProyectoColegio
                     sumaMonto += double.Parse(row.Cells[4].Value.ToString());
                 }
             }
-            
+
+            txtTotal.Text = Convert.ToString(sumaMonto);
         }
 
         void Limpiar()
@@ -123,6 +129,27 @@ namespace ProyectoColegio
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbGrado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < grados.Length; i++)
+            {
+                double precio;
+
+                if (grados[i].Contains("Primaria"))
+                {
+                    precio = precios[0];
+                }
+                else
+                {
+                    precio = precios[1];
+                }
+
+                txtMonto.Text = Convert.ToString(precio);
+            }
+
+
         }
     }
 }

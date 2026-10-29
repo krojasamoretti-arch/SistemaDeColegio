@@ -50,6 +50,23 @@ namespace ProyectoColegio
                precio(),
                canidad(),
                total());
+
+            CalcularTotal();
+        }
+
+        void CalcularTotal()
+        {
+            double sumatotal = 0;
+
+            foreach (DataGridViewRow row in dgvResultados.Rows)
+            {
+                if (row.Cells[3].Value != null)
+                {
+                    sumatotal += double.Parse(row.Cells[3].Value.ToString());
+                }
+            } 
+            
+            txtTotal.Text = Convert.ToString(sumatotal);
         }
 
         private void cbLibro_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,7 +78,7 @@ namespace ProyectoColegio
             {
                 if (libros[i] == cbLibro.Text)
                 {
-                    txtPrecio.Text = precios[i].ToString("0.00");
+                    txtPrecio.Text = precios[i].ToString(".00");
                     break;
                 }
             }

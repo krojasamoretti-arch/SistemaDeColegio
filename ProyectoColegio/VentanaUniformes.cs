@@ -10,8 +10,8 @@ namespace ProyectoColegio
 {
     public partial class VentanaUniforme : Form
     {
-            string[] prendas = { "Camisa", "Pantalón", "Buzo", "Falda", "Casaca" };
-            double[] precios = { 35.00, 50.00, 80.00, 45.00, 50.00 };
+        string[] prendas = { "Camisa", "Pantalón", "Buzo", "Falda", "Casaca" };
+        double[] precios = { 35.00, 50.00, 80.00, 45.00, 50.00 };
 
         public VentanaUniforme()
         {
@@ -64,7 +64,8 @@ namespace ProyectoColegio
                 }
             }
 
-
+            txtCantidad.Text = Convert.ToString(sumaCantidad);
+            txtTotal.Text = Convert.ToString(sumaPrecioTotal);
         }
 
 
@@ -79,23 +80,27 @@ namespace ProyectoColegio
                 total()
                 );
 
+            calcularTotales();
+
 
 
 
         }
-        
+
         private void cbPrenda_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtPrecio.Clear();
 
-            for (int i=0; 1<prendas.Length; i++)
+            for (int i = 0; 1 < prendas.Length; i++)
             {
                 if (prendas[i] == cbPrenda.Text)
                 {
-                    txtPrecio.Text = precios[i].ToString("0.00");
+                    txtPrecio.Text = precios[i].ToString(".00");
                     break;
                 }
             }
+
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
