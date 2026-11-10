@@ -35,7 +35,7 @@ namespace ProyectoColegio
             return monto;
         }
 
-        private bool ValidarCamposMatricula()
+        private bool ValidarCampos()
         {
             string dni = txtDni.Text.Trim();
 
@@ -67,7 +67,7 @@ namespace ProyectoColegio
 
 
 
-        void CalcularMatricula()
+        void CalcularTotal()
         {
             double sumaMonto = Convert.ToDouble(txtMonto.Text);
 
@@ -101,9 +101,9 @@ namespace ProyectoColegio
         {
 
 
-            CalcularMatricula();
+            CalcularTotal();
 
-            if (!ValidarCamposMatricula())
+            if (!ValidarCampos())
                 return;
 
             dgvResultados.Rows.Add(

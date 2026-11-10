@@ -46,7 +46,7 @@ namespace ProyectoColegio
             return total;
         }
 
-        void calcularTotales()
+        void calcularTotal()
         {
             double sumaCantidad = 0;
             double sumaPrecioTotal = 0;
@@ -80,7 +80,7 @@ namespace ProyectoColegio
                 total()
                 );
 
-            calcularTotales();
+            calcularTotal();
 
 
 
