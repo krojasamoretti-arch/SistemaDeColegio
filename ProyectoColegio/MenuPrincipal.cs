@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,32 @@ namespace ProyectoColegio
         {
             VentanaLibros registro3 = new VentanaLibros();
             registro3.ShowDialog();
+        }
+        
+
+        private void rEGISTROToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+            VentanaMatricula registro = new VentanaMatricula();
+            registro.WindowState = FormWindowState.Normal;
+            registro.Show();
+            
+
+            
+
+        }
+
+        private void ToolStripLibros_Click(object sender, EventArgs e)
+        {
+            VentanaLibros registro3 = new VentanaLibros();
+            registro3.ShowDialog();
+        }
+
+        private void ToolStripUniformes_Click(object sender, EventArgs e)
+        {
+            VentanaUniforme registro2 = new VentanaUniforme();
+            registro2.ShowDialog();
         }
     }
 }

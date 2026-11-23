@@ -64,8 +64,8 @@ namespace ProyectoColegio
                 {
                     sumatotal += double.Parse(row.Cells[3].Value.ToString());
                 }
-            } 
-            
+            }
+
             txtTotal.Text = Convert.ToString(sumatotal);
         }
 
@@ -74,7 +74,7 @@ namespace ProyectoColegio
 
             txtPrecio.Clear();
 
-            for (int i=0; 1<libros.Length; i++)
+            for (int i = 0; 1 < libros.Length; i++)
             {
                 if (libros[i] == cbLibro.Text)
                 {
@@ -82,6 +82,11 @@ namespace ProyectoColegio
                     break;
                 }
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

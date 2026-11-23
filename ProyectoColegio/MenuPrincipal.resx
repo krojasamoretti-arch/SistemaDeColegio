@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAgAAAHyCAYAAABmqPzCAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAA/7JJREFUeF7s/fWfHMe1/4/ff+L7+LxvbMuQm5t7b+CGLDTHMYNoRWZ2TDHHjLET
+        cQAAEnEB89x6jgAA/7JJREFUeF7s/fWfHMe1/4/ff+L7+LxvbMuQm5t7b+CGLDTHMYNoRWZ2TDHHjLET
         JzFbtKBdgWVmRtmSdmcWRMskssBiaXF4Xt/H61TXTM+Zntlekta5+uH56Jnu6uqq6uruOqdOnfNvo8YV
         4Oix03H0mBkYNWY6jho7DUeOm4qjx0/PyTETZmTtGzVuGiSv8bnh8VHjpjppMzl67DQcM6af8Bwp6xQc
         PaG/8LzscliOGluQE133XGTmWeBRBn+YNjOk2zK9L+O4Qh93c9TYKZ4cM3YqjhszLSfHji7w5OgxLOsk

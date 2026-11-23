@@ -52,6 +52,7 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             label7 = new Label();
             txtTotal = new TextBox();
+            btnSalir = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvResultados).BeginInit();
             SuspendLayout();
             // 
@@ -236,7 +237,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label7.Location = new Point(826, 323);
+            label7.Location = new Point(835, 423);
             label7.Name = "label7";
             label7.Size = new Size(124, 20);
             label7.TabIndex = 16;
@@ -244,10 +245,20 @@
             // 
             // txtTotal
             // 
-            txtTotal.Location = new Point(770, 356);
+            txtTotal.Location = new Point(770, 446);
             txtTotal.Name = "txtTotal";
             txtTotal.Size = new Size(247, 27);
             txtTotal.TabIndex = 17;
+            // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(817, 293);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(142, 94);
+            btnSalir.TabIndex = 18;
+            btnSalir.Text = "SALIR";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click_1;
             // 
             // VentanaMatricula
             // 
@@ -255,6 +266,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1029, 554);
+            Controls.Add(btnSalir);
             Controls.Add(txtTotal);
             Controls.Add(label7);
             Controls.Add(cbGrado);
@@ -271,6 +283,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            MdiChildrenMinimizedAnchorBottom = false;
             Name = "VentanaMatricula";
             Text = "VentanaMatricula";
             Load += Form1_Load;
@@ -303,5 +316,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private Label label7;
         private TextBox txtTotal;
+        private Button btnSalir;
     }
 }
