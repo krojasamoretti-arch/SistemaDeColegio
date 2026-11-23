@@ -51,7 +51,7 @@
             // btnSalir
             // 
             btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalir.Location = new Point(426, 207);
+            btnSalir.Location = new Point(396, 209);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(200, 150);
             btnSalir.TabIndex = 3;
